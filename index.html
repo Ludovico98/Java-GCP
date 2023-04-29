@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>BMI Calculator</title>
+<style>
+    #result {
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<header>BMI Calculator</h1>
+
+<label for="weight">Weight (kg):</label>
+<input type="number" id="weight" placeholder="Enter weight in kilograms">
+
+<label for="height">Height (cm):</label>
+<input type="number" id="height" placeholder="Enter height in centimeters">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div id="result"></div>
+
+<h1>YouTube Video Player</h1>
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/_tV0ZZXUjU4" frameborder="0" allowfullscreen></iframe>
+
+<script>
+    function calculateBMI() {
+        // Get weight and height input values
+        var weightInput = document.getElementById("weight");
+        var heightInput = document.getElementById("height");
+
+        // Convert weight and height to numbers
+        var weight = parseFloat(weightInput.value);
+        var height = parseFloat(heightInput.value);
+
+        // Convert height to meters
+        var heightInMeters = height / 100;
+
+        // Calculate BMI
+        var bmi = weight / (heightInMeters * heightInMeters);
+
+        // Display the calculated BMI
+        var resultElement = document.getElementById("result");
+        resultElement.textContent = "Your BMI is: " + bmi.toFixed(2);
+    }
+
+
+    
+</script>
+</body>
+
+</body>
+</html>
